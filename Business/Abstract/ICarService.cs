@@ -9,6 +9,7 @@ namespace Business
 {
     public interface ICarService
     {
+        void Add(Car car);
         List<Car> GetAll();
         List<Car> GetById(int id);
         List<Car> GetCarsByBrandId(int id);
