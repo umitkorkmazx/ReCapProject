@@ -1,5 +1,5 @@
-﻿using Core.DataAccess;
-using Core.DataAccess.EntityFramework;
+﻿using Core.DataAccess.EntityFramework;
+using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using System;
@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Abstract
+namespace DataAccess.Concrete
 {
-    public interface IBrandDal: IEntityRepository<Brand>
+    public class EfColorDal : EfEntityRepositoryBase<Color, RentACarContext>, IColorDal
     {
     }
 }
