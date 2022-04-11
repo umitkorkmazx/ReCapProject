@@ -40,12 +40,12 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Car>> (_carDal.GetAll());
         }
 
-        public IDataResult<List<Car>> GetAllCarsByBrandId(int id)
+        public IDataResult<List<Car>> GetCarsByBrandId(int id)
         {
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.BrandId == id),"Arabalar Listelendi");
         }
 
-        public IDataResult<List<Car>> GetAllCarsByColorId(int id)
+        public IDataResult<List<Car>> GetCarsByColorId(int id)
         {
             return new DataResult<List<Car>>(_carDal.GetAll(c => c.ColorId == id),true,"Arabalar listelendi");
         }
